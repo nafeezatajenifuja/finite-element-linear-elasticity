@@ -1,0 +1,20 @@
+name: Numerical verification
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  numerical-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - run: python -m pip install -r requirements.txt -e .
+      - run: python -m pip check
+      - run: python -m unittest discover -s tests -v
+      - run: python -m examples.rod_self_weight

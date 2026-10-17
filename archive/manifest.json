@@ -1,0 +1,131 @@
+{
+  "authorship_basis": "Author confirmed all Python implementation under FEM_LE was written by her; source headers and report provide supporting evidence. Instructor permitted public release of student implementation, as reported by author.",
+  "artifacts": [
+    {
+      "path": "archive/original_course_structure/FEM_LE/add_paths.py",
+      "source": "HW_Soln/FEM_LE/add_paths.py",
+      "sha256": "13468c710cb663894ddbda6774086f77c5eab42f3b46d75a496328b95aabf8ec",
+      "bytes": 2533,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Error_Analysis/Calculate_Error_LE.py",
+      "source": "HW_Soln/FEM_LE/Error_Analysis/Calculate_Error_LE.py",
+      "sha256": "f4ba900d002db8b916e5697c419c233e9e7d0ed79b3f7ac0bc11d03470afaec0",
+      "bytes": 4393,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/FemFramework/Assemble.py",
+      "source": "HW_Soln/FEM_LE/FemFramework/Assemble.py",
+      "sha256": "c1b1eeca6fda5523ecdf2bc24fcff767ebbb79a5088e4734b0adf809758dc9fa",
+      "bytes": 3134,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/FemFramework/Create_constraints_vector.py",
+      "source": "HW_Soln/FEM_LE/FemFramework/Create_constraints_vector.py",
+      "sha256": "d9a958a73c74c7f45a3ee937f230d22abcfd31ba0d7df3c137849952a63c0407",
+      "bytes": 2917,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/FemFramework/create_id.py",
+      "source": "HW_Soln/FEM_LE/FemFramework/create_id.py",
+      "sha256": "9b06b028bbc89b7bd3958f3ed96ca2fc0b886abd90204e219fd74aa35a455765",
+      "bytes": 3525,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/FemFramework/gauss_points.py",
+      "source": "HW_Soln/FEM_LE/FemFramework/gauss_points.py",
+      "sha256": "42655357d9ed3402efe2093527e28ac097fe73d70eb501e3c8790fdc97a3241a",
+      "bytes": 22356,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/FemFramework/PostProcessing.py",
+      "source": "HW_Soln/FEM_LE/FemFramework/PostProcessing.py",
+      "sha256": "8e8f09343a9e52a0a7aac35c148153ba6aa01e624d1786deb4aaa01eb9823f21",
+      "bytes": 2341,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/FemFramework/Shape_functions.py",
+      "source": "HW_Soln/FEM_LE/FemFramework/Shape_functions.py",
+      "sha256": "7317ef9042fc1981d9b6a77ea6c3e3bb63ac5593764bba0d0c203060e65f421b",
+      "bytes": 30850,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/FemFramework/Vector.py",
+      "source": "HW_Soln/FEM_LE/FemFramework/Vector.py",
+      "sha256": "30976610dae29db3e263c47e292710410eb788cae4064aca2570776e24c625b3",
+      "bytes": 1333,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Physics_model/Kernel_LE/Calculate_global_matrices_LE.py",
+      "source": "HW_Soln/FEM_LE/Physics_model/Kernel_LE/Calculate_global_matrices_LE.py",
+      "sha256": "11a0d8350ffb4475ddfdfbd293fa365540e0d8e7b6c4c2371280ecc04d092ecd",
+      "bytes": 4299,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Physics_model/Kernel_LE/calculate_local_matrices_LE.py",
+      "source": "HW_Soln/FEM_LE/Physics_model/Kernel_LE/calculate_local_matrices_LE.py",
+      "sha256": "6e55379b4ae6d5a3815750f5199f7ce36ca2d094f5d426757fac5d0963fd3398",
+      "bytes": 4003,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Physics_model/Kernel_LE/Driver_LE.py",
+      "source": "HW_Soln/FEM_LE/Physics_model/Kernel_LE/Driver_LE.py",
+      "sha256": "3e9b33a23d8625bf5a3aa09215e5042a43780ea2dc9d521ee817f6e27d6655bc",
+      "bytes": 5520,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Physics_model/Kernel_LE/Get_Elastic_Moduli.py",
+      "source": "HW_Soln/FEM_LE/Physics_model/Kernel_LE/Get_Elastic_Moduli.py",
+      "sha256": "2cb1a769bd80795edc5311cba92d0d35efcab1c79b80444d29e69d61c38a2697",
+      "bytes": 2051,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Physics_model/Kernel_LE/get_rhob.py",
+      "source": "HW_Soln/FEM_LE/Physics_model/Kernel_LE/get_rhob.py",
+      "sha256": "49438a51712b785c19229f2ba4ccb0ac62022fdced29c7a6b75dd469f16145f0",
+      "bytes": 2616,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Physics_model/Kernel_LE/Stress_Recovery.py",
+      "source": "HW_Soln/FEM_LE/Physics_model/Kernel_LE/Stress_Recovery.py",
+      "sha256": "2cb0ff7bc3acb33bddb07f5a1f9cdc79d9bd3c4149be0b526c235e205dc2039c",
+      "bytes": 8141,
+      "attribution": "Student-authored Python counterpart to instructor MATLAB reference; reference lineage credited"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Physics_model/Kernel_LE/TMatrix.py",
+      "source": "HW_Soln/FEM_LE/Physics_model/Kernel_LE/TMatrix.py",
+      "sha256": "5a61ea8334710098427cc4a01f6fc1c0d4e9c2b19576618a97c78f604d826826",
+      "bytes": 1345,
+      "attribution": "Student-authored Python counterpart to instructor MATLAB reference; reference lineage credited"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Error_Analysis/Calculate_Error.py",
+      "source": "HW_Soln/FEM/Error_Analysis/Calculate_Error.py",
+      "sha256": "f368b1ddd496659eb0c2285b8cc77d0fdf136cb16362f7aaf2f8528b791312d3",
+      "bytes": 5571,
+      "attribution": "Student-authored Python, confirmed by author"
+    },
+    {
+      "path": "archive/original_course_structure/FEM_LE/Tests/Test_LE/Final_Project.ipynb",
+      "source": "HW_Soln/FEM_LE/Tests/Test_LE/Final_Project.ipynb",
+      "sha256": "69e4307f6f06d87772b2320162ebbafa3e8fc09e55511e70bf855b6e9230f3b9",
+      "bytes": 1620434,
+      "attribution": "Student-authored Python, confirmed by author"
+    }
+  ]
+}

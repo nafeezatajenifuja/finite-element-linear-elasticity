@@ -1,0 +1,5 @@
+# Direct imports verified in the student's original Python implementation.
+numpy==2.4.4
+scipy==1.16.2
+matplotlib==3.10.6
+sympy==1.14.0

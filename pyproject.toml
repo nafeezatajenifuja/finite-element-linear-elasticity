@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finite-element-linear-elasticity"
+version = "0.1.0"
+description = "Graduate course implementation of Galerkin FEM for quasi-static linear elasticity"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "matplotlib", "sympy"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

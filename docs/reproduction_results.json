@@ -1,0 +1,483 @@
+{
+  "full_original_meshes": true,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.16.2",
+      "matplotlib": "3.10.6",
+      "sympy": "1.14.0"
+    },
+    "openblas_num_threads": "1"
+  },
+  "checks": [
+    "Rod L2 estimates match saved notebook output",
+    "Rod H1 estimates match saved notebook output",
+    "Rod slopes remain 2 and 1",
+    "Unchanged Q8 beam sequence matches saved output",
+    "Cylinder strain energies match original meshes",
+    "Cylinder L2 estimates match original meshes",
+    "Full cylinder fitted slope matches recorded 1.7438",
+    "Cook mesh sequence matches saved output",
+    "Cook 64x64 Poisson sweep matches saved output",
+    "Exploratory SCF gross values match rounded legacy table",
+    "Exploratory SCF net values match rounded legacy table",
+    "Corrected cases are labelled separately; no claim that reproduced SCF values establish accuracy",
+    "All 18 archived student-artifact SHA-256 hashes match"
+  ],
+  "results": {
+    "rod": {
+      "elements": [
+        5,
+        10,
+        20,
+        50,
+        100,
+        200,
+        500
+      ],
+      "h": [
+        0.2,
+        0.1,
+        0.05,
+        0.02,
+        0.01,
+        0.005,
+        0.002
+      ],
+      "l2": [
+        2.000000000000139e-07,
+        5.0000000000045e-08,
+        1.2500000000085876e-08,
+        1.999999999887733e-09,
+        4.999999982783088e-10,
+        1.2499999897852028e-10,
+        1.9999995019268655e-11
+      ],
+      "h1_seminorm": [
+        3.4641016151377543e-06,
+        1.7320508075688774e-06,
+        8.66025403784439e-07,
+        3.464101615137752e-07,
+        1.7320508075688762e-07,
+        8.660254037844409e-08,
+        3.464101615137747e-08
+      ],
+      "slopes": [
+        2.0000000367985797,
+        0.9999999999999993
+      ],
+      "tip_displacement": 3.0000000000000035e-05,
+      "body_force": 15000.0,
+      "figures": [
+        "figures\\convergence\\rod_error_convergence.png",
+        "figures\\stress_recovery\\rod_displacement_and_stress.png"
+      ],
+      "correction": "Stress example uses rho*g, not rho*g*A; originals are archived."
+    },
+    "beam": {
+      "elements_along_length": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "poisson": 0.1,
+      "curves": {
+        "Q4, 1 layer(s)": [
+          -0.0006605045871559436,
+          -0.001996176470588793,
+          -0.004382868852455118,
+          -0.006303520710056605,
+          -0.007083286189682372,
+          -0.007309615714967383
+        ],
+        "Q4, 4 layer(s)": [
+          -0.0006608803023067507,
+          -0.0020010926644448697,
+          -0.004410946499849236,
+          -0.006366191623267326,
+          -0.007164988419477437,
+          -0.0073976229094214205
+        ],
+        "Q8, 1 layer(s)": [
+          -0.007011331014079508,
+          -0.007399665714479374,
+          -0.007461872188920058,
+          -0.007472403483772818,
+          -0.007475449416095787,
+          -0.007476472865047184
+        ]
+      },
+      "euler_bernoulli_reference": -0.007499999999999998,
+      "figures": [
+        "figures\\elasticity\\cantilever_q4_q8.png"
+      ],
+      "correction": "All curves use the same nu; the archived one-layer Q4 curve used nu=0.3."
+    },
+    "cylinder": {
+      "radial_elements": [
+        4,
+        8,
+        12,
+        16,
+        24,
+        40
+      ],
+      "angular_elements": [
+        16,
+        32,
+        48,
+        64,
+        96,
+        160
+      ],
+      "h": [
+        0.225,
+        0.1125,
+        0.075,
+        0.05625,
+        0.0375,
+        0.0225
+      ],
+      "energies": [
+        1112.077435816852,
+        1132.7985769919276,
+        1136.5311107223672,
+        1137.8144938284524,
+        1138.7193815103944,
+        1139.1775020370112
+      ],
+      "l2": [
+        0.0003497313315217666,
+        0.0001238180627210499,
+        6.209771362160945e-05,
+        3.6949465213234995e-05,
+        1.723842695795199e-05,
+        6.388986710450895e-06
+      ],
+      "fitted_l2_slope": 1.7437757660580382,
+      "full": true,
+      "figures": [
+        "figures\\convergence\\cylinder_error_and_energy.png",
+        "figures\\elasticity\\cylinder_analytical_comparison.png"
+      ],
+      "mode": "plane_stress",
+      "boundary_conditions": "inner fixed; outer radial displacement 0.05; no pressure load"
+    },
+    "cook": {
+      "mesh_counts": [
+        2,
+        4,
+        8,
+        12,
+        16,
+        32,
+        64
+      ],
+      "tip_displacement": [
+        81.35941811525649,
+        83.31719214360778,
+        85.60456757333948,
+        88.6185302589394,
+        92.45738348004168,
+        113.32204860637991,
+        161.19140882223095
+      ],
+      "poisson_values": [
+        0.0,
+        0.1,
+        0.25,
+        0.4,
+        0.45,
+        0.49,
+        0.4999
+      ],
+      "poisson_tip_displacement": [
+        390.09143191192754,
+        390.21439347411945,
+        375.65015104976004,
+        341.6867270028025,
+        324.91462290693227,
+        304.14547188161606,
+        161.19140882223095
+      ],
+      "sensitivity_mesh": 64,
+      "full": true,
+      "stress_line_y": [
+        22.0,
+        22.46875,
+        22.9375,
+        23.40625,
+        23.875,
+        24.34375,
+        24.8125,
+        25.28125,
+        25.75,
+        26.21875,
+        26.6875,
+        27.15625,
+        27.625,
+        28.09375,
+        28.5625,
+        29.03125,
+        29.5,
+        29.96875,
+        30.4375,
+        30.90625,
+        31.375,
+        31.84375,
+        32.3125,
+        32.78125,
+        33.25,
+        33.71875,
+        34.1875,
+        34.65625,
+        35.125,
+        35.59375,
+        36.0625,
+        36.53125,
+        37.0,
+        37.46875,
+        37.9375,
+        38.40625,
+        38.875,
+        39.34375,
+        39.8125,
+        40.28125,
+        40.75,
+        41.21875,
+        41.6875,
+        42.15625,
+        42.625,
+        43.09375,
+        43.5625,
+        44.03125,
+        44.5,
+        44.96875,
+        45.4375,
+        45.90625,
+        46.375,
+        46.84375,
+        47.3125,
+        47.78125,
+        48.25,
+        48.71875,
+        49.1875,
+        49.65625,
+        50.125,
+        50.59375,
+        51.0625,
+        51.53125,
+        52.0
+      ],
+      "stress_trace": [
+        6963.150335603956,
+        152.91112715420368,
+        154.95029904846476,
+        156.10352554791427,
+        157.15687884382447,
+        158.1695067951031,
+        159.2220002562144,
+        160.34556773081826,
+        161.55732404153292,
+        162.86089178163553,
+        164.25150312531736,
+        165.71840101651634,
+        167.246993650883,
+        168.82044096415797,
+        170.42088398976796,
+        172.030349952111,
+        173.63138963149336,
+        175.20748048879753,
+        176.74325016611613,
+        178.2245394588561,
+        179.63835189362175,
+        180.97270845727624,
+        182.21643612035567,
+        183.35890678516373,
+        184.38974320003442,
+        185.298503713219,
+        186.0743501852847,
+        186.70571359143102,
+        187.1799498843611,
+        187.48299982730487,
+        187.5990418720478,
+        187.5101519316668,
+        187.19595905700828,
+        186.63330370983965,
+        185.79589734766301,
+        184.65398675188757,
+        183.17402333088825,
+        181.31834361704716,
+        179.04486519932422,
+        176.30680688371922,
+        173.05244110315817,
+        169.22488933372782,
+        164.7619753145372,
+        159.5961458985472,
+        153.654476390962,
+        146.8587754906394,
+        139.12578864476092,
+        130.3675142159539,
+        120.49160776358723,
+        109.40185078295033,
+        96.99860713350047,
+        83.17914301488814,
+        67.83759297783453,
+        50.864170710357335,
+        32.14305804183475,
+        11.547439774674231,
+        -11.06903737392645,
+        -35.89450309076884,
+        -63.18020464742112,
+        -93.38032198295086,
+        -127.05747518613975,
+        -166.5196802503222,
+        -211.91627794535725,
+        -300.21684146012655,
+        -13210.071453956652
+      ],
+      "figures": [
+        "figures\\elasticity\\cook_mesh_and_poisson_sensitivity.png",
+        "figures\\stress_recovery\\cook_trace.png"
+      ],
+      "validation": "mesh/material sensitivity; no analytical Cook solution"
+    },
+    "scf": {
+      "rows": [
+        {
+          "ratio": 0.1,
+          "gross_factor": 2.051302783971624,
+          "net_factor": 1.8461725055744616,
+          "maximum_hoop_stress": 1367535.1893144161,
+          "maximum_location": [
+            5.0,
+            -0.1499999999999999
+          ],
+          "maximum_sample_radius": 0.1499999999999999,
+          "ideal_hole_radius": 0.1,
+          "sampled_nodes": 13,
+          "stress_at_maximum": [
+            1367535.1893144161,
+            51378.84400536755,
+            1.2376403901726007e-08
+          ],
+          "node_count": 3317
+        },
+        {
+          "ratio": 0.2,
+          "gross_factor": 2.0802727702934485,
+          "net_factor": 1.664218216234759,
+          "maximum_hoop_stress": 1386848.5135289659,
+          "maximum_location": [
+            5.0,
+            -0.125
+          ],
+          "maximum_sample_radius": 0.125,
+          "ideal_hole_radius": 0.1,
+          "sampled_nodes": 16,
+          "stress_at_maximum": [
+            1386848.5135289659,
+            39305.26582804881,
+            -2.566375769674778e-07
+          ],
+          "node_count": 3313
+        },
+        {
+          "ratio": 0.3,
+          "gross_factor": 2.207670619584212,
+          "net_factor": 1.5453694337089485,
+          "maximum_hoop_stress": 1471780.4130561417,
+          "maximum_location": [
+            5.0,
+            -0.11666666666666667
+          ],
+          "maximum_sample_radius": 0.11666666666666667,
+          "ideal_hole_radius": 0.1,
+          "sampled_nodes": 18,
+          "stress_at_maximum": [
+            1471780.4130561417,
+            40934.3916184469,
+            4.82788891531527e-07
+          ],
+          "node_count": 3309
+        },
+        {
+          "ratio": 0.4,
+          "gross_factor": 2.2317918532542174,
+          "net_factor": 1.3390751119525304,
+          "maximum_hoop_stress": 1487861.2355028116,
+          "maximum_location": [
+            5.0,
+            -0.125
+          ],
+          "maximum_sample_radius": 0.125,
+          "ideal_hole_radius": 0.1,
+          "sampled_nodes": 16,
+          "stress_at_maximum": [
+            1487861.2355028116,
+            58112.94897880442,
+            -6.428308552131057e-08
+          ],
+          "node_count": 3305
+        },
+        {
+          "ratio": 0.5,
+          "gross_factor": 2.5608171687192884,
+          "net_factor": 1.2804085843596442,
+          "maximum_hoop_stress": 1707211.445812859,
+          "maximum_location": [
+            5.0,
+            0.12
+          ],
+          "maximum_sample_radius": 0.12,
+          "ideal_hole_radius": 0.1,
+          "sampled_nodes": 18,
+          "stress_at_maximum": [
+            1707211.445812859,
+            56444.28361342459,
+            -8.914699719753116e-06
+          ],
+          "node_count": 3301
+        },
+        {
+          "ratio": 0.6,
+          "gross_factor": 2.6935197058176454,
+          "net_factor": 1.0774078823270583,
+          "maximum_hoop_stress": 1795679.8038784305,
+          "maximum_location": [
+            5.0,
+            -0.11666666666666667
+          ],
+          "maximum_sample_radius": 0.11666666666666667,
+          "ideal_hole_radius": 0.1,
+          "sampled_nodes": 18,
+          "stress_at_maximum": [
+            1795679.8038784305,
+            60577.29899564595,
+            6.257323548197746e-08
+          ],
+          "node_count": 3298
+        }
+      ],
+      "full": true,
+      "nx": 81,
+      "ny": 41,
+      "figures": [
+        "figures\\elasticity\\stress_concentration_exploratory.png"
+      ],
+      "correction": "sigma_xy = mu * engineering_gamma_xy",
+      "limitation": "Stair-step hole; legacy radial-band sampling is not guaranteed to select hole-boundary nodes. Not a validated SCF benchmark."
+    }
+  },
+  "qualifications": [
+    "Archived notebook outputs are the numerical reference; the report's rod table is inconsistent with those outputs.",
+    "The rod stress loading, beam comparison nu, and engineering-shear recovery have approved corrections.",
+    "Euler-Bernoulli is an engineering beam reference, not an exact 2D elasticity solution.",
+    "The SCF geometry and sampling limitations remain; this is not a validated circular-hole benchmark."
+  ]
+}
